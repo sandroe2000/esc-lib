@@ -1,0 +1,66 @@
+<div>
+    <div class="table-responsive">
+        <table class="table table-sm">
+            <caption>Lista de Usuários</caption>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Inativo</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="{{id}}" data-loop>
+                    <td>{{id}}</td>
+                    <td>{{name}}</td>
+                    <td>{{disabled}}</td>
+                    <td class="text-end">
+                        <a id="icoEditarUsuario" class="me-3" href="#"><i class="bi bi-pencil-square"></i></a>
+                        <a id="icoRemoverUsuario" href="#"><i class="bi bi-trash"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="modal fade" id="editarUsuariosModal" tabindex="-1" aria-labelledby="editarUsuariosModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editarUsuariosModalLabel">Editar Usuário</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="editarUsuariosForm" method="POST" action="return false">
+                    <div class="modal-body">
+                        <div class="row g-2">
+                            <div class="col-md-3 mb-2">
+                                <label for="id" class="form-label">#</label>
+                                <input type="text" id="id" data-bind="id" class="form-control" disabled />
+                            </div>
+                            <div class="col-md-9 mb-2">
+                                <label for="name" class="form-label">Nome</label>
+                                <input type="text" id="name" data-bind="name" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="row g-2">
+                            <div class="col-md mb-2">
+                                <label for="inativo" class="form-label">Inativo</label>
+                                <input type="date" id="disabled" data-bind="disabled" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button id="editarUsuariosModalSave" type="button" class="btn btn-primary">Salvar Mudanças</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="toast-container position-absolute top-0 end-0 p-3">
+        <div id="removerToast" class="toast d-flex align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body">...</div>
+            <button type="button" class="btn-close btn-close-white ms-auto me-2" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>

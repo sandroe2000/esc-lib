@@ -1,0 +1,23 @@
+/*Bootstrap Custom*/
+body {
+    margin: 100x;
+}
+.modal-header,
+.modal-footer {
+    border-bottom: none !important;
+    border-top: none !important;
+}
+.card-footer {
+    padding: 1rem 1rem;
+    background-color: transparent !important;
+    border-top: none; 
+}
+
+table tr th,
+table tr td {
+    white-space: nowrap;
+}
+
+.form-label {
+    margin-bottom: 0;
+}

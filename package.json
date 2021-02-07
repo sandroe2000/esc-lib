@@ -1,0 +1,28 @@
+{
+  "name": "esc-lib",
+  "version": "1.0.0",
+  "description": "Um mini lib de puro EcmaScript Component",
+  "main": "index.js",
+  "bin": {
+    "esc-lib": "Component.js"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
+  },
+  "scripts": {
+    "start": "http-server -c-1 -p 8081"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandroe2000/esc-lib.git"
+  },
+  "author": "sandroe2000@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sandroe2000/esc-lib/issues"
+  },
+  "homepage": "https://github.com/sandroe2000/esc-lib#readme"
+}
